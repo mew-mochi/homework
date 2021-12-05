@@ -1,0 +1,45 @@
+public class Main {
+
+     public static void main(String[] args) {
+         Student John = new Student();
+         Student Mike = new Student("Mike");
+         Student Mary = new Student("Mary", 17, 3.27);
+     }
+ }
+
+ public class Student {
+     // class variables for name, age, and gpa
+     private String name;
+     private int age;
+     private double gpa;
+
+     //default constructor that will assign the values of "None", 6, and 0.0 to the class variables
+     public Student() {
+         this.name = "";
+         this.age= 6;
+         this.gpa=0.0;
+     }
+     // assign the parameters provided from Main to the class variables
+     public Student(String name, int age, double gpa) {
+         this.name = name;
+         this.age = age;
+         this.gpa = gpa;
+     }
+     //constructor that takes in a name parameter and assigns it to the class variable, 
+     // then assigns the same default values
+     public Student(String name) {
+         this.name = name;
+         this.age= 6;
+         this.gpa=0.0;
+     }
+
+
+     @Override
+     public String toString() {
+        return "Student{" +
+        "name='" + name + '\'' +
+        ", age=" + age +
+        ", gpa=" + gpa +
+         '}';
+     }
+ }
